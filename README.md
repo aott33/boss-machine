@@ -14,8 +14,10 @@ You can view a video demonstration of the final app [here](https://s3.amazonaws.
 
 ### Once you have the project downloaded, you'll need to run some terminal commands to get the application started:
 
-- [ ] Open the root project directory in your terminal. Run `npm install` to install the dependencies of this project and build the front-end application
-- [ ] Once it has finished installing, you can run `npm run start` to begin your server
+- [X] Open the root project directory in your terminal. Run `npm install` to install the dependencies of this project and build the front-end application
+  - There was an issue an error when trying to run `npm install`. I reasearched and found the following helpful resource:
+    - [For exercises that aren’t supposed to go live and thus being up to date – adding the flag --legacy-peer-deps usually fixes the issue](https://discuss.codecademy.com/t/issue-with-boss-machine-starting-file-redux-dependency/650300/2)
+- [X] Once it has finished installing, you can run `npm run start` to begin your server
 
 - You'll see `Server listening on port 4001` in the terminal
 - The `npm run start` script will automatically restart your server whenever you make changes to the **server.js** file or **server/** folder
