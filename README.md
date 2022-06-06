@@ -10,7 +10,7 @@ You can view a video demonstration of the final app [here](https://s3.amazonaws.
 
 ### Download code:
 
-- [ X ] You can download the starting code for this project [here](https://s3.amazonaws.com/codecademy-content/PRO/skill-paths/backend-javascript/projects/boss-machine/project-4-boss-machine-start.zip)
+- [X] You can download the starting code for this project [here](https://s3.amazonaws.com/codecademy-content/PRO/skill-paths/backend-javascript/projects/boss-machine/project-4-boss-machine-start.zip)
 
 ### Once you have the project downloaded, you'll need to run some terminal commands to get the application started:
 
