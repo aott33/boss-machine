@@ -28,7 +28,9 @@ You can view a video demonstration of the final app [here](https://s3.amazonaws.
 
 ## Implementation Details
 
-To complete the project, you will need to complete code in a few sections of the project. Generally, you will not have to touch anything inside the **browser**, **public**, or **node_modules** folders unless you know some React and HTML/CSS and want to customize the look of the Boss Machine. Before doing any of that, however, let's focus on getting the API server up and running:
+- To complete the project, you will need to complete code in a few sections of the project
+- Generally, you will not have to touch anything inside the **browser**, **public**, or **node_modules** folders unless you know some React and HTML/CSS and want to customize the look of the Boss Machine
+- Before doing any of that, however, let's focus on getting the API server up and running:
 
 ### Server Boilerplate
 
