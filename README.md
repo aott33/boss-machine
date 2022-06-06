@@ -13,7 +13,7 @@ You can view a video demonstration of the final app here:
 
 ## How to Begin
 
-- [ ] To start, download the starting code for this project <a href="https://s3.amazonaws.com/codecademy-content/PRO/skill-paths/backend-javascript/projects/boss-machine/project-4-boss-machine-start.zip" target="_blank">here</a>
+- [ ] To start, download the starting code for this project <a href="https://s3.amazonaws.com/codecademy-content/PRO/skill-paths/backend-javascript/projects/boss-machine/project-4-boss-machine-start.zip">here</a>
 
 - [ ] After downloading the zip folder, double click it to uncompress it and access the contents
 
