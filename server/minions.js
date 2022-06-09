@@ -27,6 +27,7 @@ minionRouter.post('/', (req, res, next)=> {
     // destructure the minion object from above
     let salary = newMinion.salary;
 
+    // initialize boolean flag variables to false
     let hasAllInputs = false;
     let salaryIsNumber = false;
 
@@ -51,6 +52,65 @@ minionRouter.post('/', (req, res, next)=> {
     else {
         res.status(404).send('Request body is missing information or is incorrect');
     }
+})
+
+minionRouter.get('/:minionId', (req, res, next) => {
+    // model type is passed into the getFromDatabaseById function as the first argument
+    const modelType = 'minions';
+
+    const minion = getFromDatabaseById(modelType, req.params.minionId);
+
+    if (minion) { 
+        res.send(minion);
+    }
+
+    else {
+        res.status(404).send('Invalid id');
+    }    
+})
+
+minionRouter.put('/:minionId', (req, res, next) => {
+    // model type is passed into the getFromDatabaseById function as the first argument
+    const modelType = 'minions';
+    // get the request body which should contain data from 
+    let updatedMinion = req.body;
+
+    // destructure the minion object from above
+    let salary = updatedMinion.salary;
+
+    // initialize boolean flag variables to false
+    let hasAllInputs = false;
+    let salaryIsNumber = false;
+
+    // checks if all the request body has all the required input
+    if (updatedMinion.hasOwnProperty('name') &&
+        updatedMinion.hasOwnProperty('title') &&
+        updatedMinion.hasOwnProperty('salary') &&
+        updatedMinion.hasOwnProperty('weaknesses')) {
+            hasAllInputs = true;
+        }
+
+    // checks if salary is a number
+    if (!isNaN(salary)) {
+        salaryIsNumber = true;
+        updatedMinion.salary = Number(salary);
+    }
+    
+    updatedMinion.id = req.params.minionId;
+
+    let minion;
+
+    if (hasAllInputs && salaryIsNumber) {
+        minion = updateInstanceInDatabase(modelType, updatedMinion);
+    }
+    
+    if (minion) { 
+        res.send(minion);
+    }
+
+    else {
+        res.status(404).send('Request body is missing information or is incorrect or Invalid id');
+    }    
 })
 
 module.exports = minionRouter;

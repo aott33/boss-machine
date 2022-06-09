@@ -52,9 +52,9 @@ Take note of the comments in **server.js**, as your code needs to fit into speci
 
 - [ ] `/api/minions`
   - [X] GET /api/minions to get an array of all minions.
-  - [ ] POST /api/minions to create a new minion and save it to the database.
-  - [ ] GET /api/minions/:minionId to get a single minion by id.
-  - [ ] PUT /api/minions/:minionId to update a single minion by id.
+  - [X] POST /api/minions to create a new minion and save it to the database.
+  - [X] GET /api/minions/:minionId to get a single minion by id.
+  - [X] PUT /api/minions/:minionId to update a single minion by id.
   - [ ] DELETE /api/minions/:minionId to delete a single minion by id.
 - [ ] `/api/ideas`
   - [ ] GET /api/ideas to get an array of all ideas.
