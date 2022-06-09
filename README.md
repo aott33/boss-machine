@@ -36,22 +36,22 @@ You can view a video demonstration of the final app [here](https://s3.amazonaws.
 
 In **server.js**, you will see some boilerplate code, but the server is missing key functionality to allow it to run. You must:
 
-- [ ] Set up body-parsing middleware with the `body-parser` packagae.
-- [ ] Set up CORS middleware with the `cors` package. You can use the default settings.
-- [ ] Mount the existing `apiRouter` at `/api`. This router will serve as the starting point for all your API routes.
-- [ ] Start the server listening on the provided `PORT`. Make sure to use the `PORT` constant and not a hard-coded number, as this is required for tests to run.
+- [X] Set up body-parsing middleware with the `body-parser` package.
+- [X] Set up CORS middleware with the `cors` package. You can use the default settings.
+- [X] Mount the existing `apiRouter` at `/api`. This router will serve as the starting point for all your API routes.
+- [X] Start the server listening on the provided `PORT`. Make sure to use the `PORT` constant and not a hard-coded number, as this is required for tests to run.
 
 Take note of the comments in **server.js**, as your code needs to fit into specific places around the existing boilerplate.
 
 ### API Routes
 
-- [ ] Your routes should live inside the **server** folder. The file and router structure is up to you, the testing suite will only test whether your API endpoints work as intended, not how you nest your code!
-- [ ] Your 'database' exists in **server/db.js**. The beginning database will be seeded every time the server is restarted. There is more information on working with the database and the helper functions it exports below.
+- Your routes should live inside the **server** folder. The file and router structure is up to you, the testing suite will only test whether your API endpoints work as intended, not how you nest your code!
+- Your 'database' exists in **server/db.js**. The beginning database will be seeded every time the server is restarted. There is more information on working with the database and the helper functions it exports below.
 
 #### Routes Required
 
 - [ ] `/api/minions`
-  - [ ] GET /api/minions to get an array of all minions.
+  - [X] GET /api/minions to get an array of all minions.
   - [ ] POST /api/minions to create a new minion and save it to the database.
   - [ ] GET /api/minions/:minionId to get a single minion by id.
   - [ ] PUT /api/minions/:minionId to update a single minion by id.
@@ -122,7 +122,9 @@ Take note that many values that could be numbers are in fact strings. Since we a
 
 ### Custom Middleware
 
-- You will create a custom middleware function `checkMillionDollarIdea` that will come in handy in some /api/ideas routes. Write this function in the **server/checkMillionDollarIdea.js** file. This function will make sure that any new or updated ideas are still worth at least one million dollars! The total value of an idea is the product of its `numWeeks` and `weeklyRevenue` properties.
+- You will create a custom middleware function `checkMillionDollarIdea` that will come in handy in some /api/ideas routes. 
+- Write this function in the **server/checkMillionDollarIdea.js** file.
+- This function will make sure that any new or updated ideas are still worth at least one million dollars! The total value of an idea is the product of its `numWeeks` and `weeklyRevenue` properties.
 
 ### Bonus
 
@@ -160,3 +162,7 @@ about whether or not each test passed. After this list, you will see more specif
 about why each failing test failed. While they are open in a terminal window, these tests will re-run every time you save server files. If you want to quit the testing loop, use `Ctrl + C`. If you only want to run the tests once, you can run the `mocha` command in the terminal from your project root directory.
 
 As you implement functionality, run the tests to ensure you are implementing your routes and middleware correctly. The tests will additionally help you identify edge cases that you may not have anticipated when first writing your routes. You should also test the functionality on the frontend to make sure that things are working as intended. Feel free to add logging middleware to your server, it will help with debugging!
+
+## Resources
+- [Web Dev Simplified YouTube - Learn Express Middleware In 14 Minutes](https://www.youtube.com/watch?v=lY6icfhap2o)
+- [Web Dev Simplified Blog - How To Use And Write Express Middleware](https://blog.webdevsimplified.com/2019-12/express-middleware-in-depth/)
