@@ -3,13 +3,11 @@ const minionRouter = express.Router();
 
 
 const {
-    createMeeting,
     getAllFromDatabase,
     getFromDatabaseById,
     addToDatabase,
     updateInstanceInDatabase,
     deleteFromDatabasebyId,
-    deleteAllFromDatabase,
   } = require('./db');
 
 minionRouter.get('/', (req, res, next) => {
@@ -110,6 +108,21 @@ minionRouter.put('/:minionId', (req, res, next) => {
 
     else {
         res.status(404).send('Request body is missing information or is incorrect or Invalid id');
+    }    
+})
+
+minionRouter.delete('/:minionId', (req, res, next) => {
+    // model type is passed into the getFromDatabaseById function as the first argument
+    const modelType = 'minions';
+
+    const minion = deleteFromDatabasebyId(modelType, req.params.minionId);
+
+    if (minion) { 
+        res.status(204).send();
+    }
+
+    else {
+        res.status(404).send('Minion not found');
     }    
 })
 

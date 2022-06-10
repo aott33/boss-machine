@@ -50,22 +50,22 @@ Take note of the comments in **server.js**, as your code needs to fit into speci
 
 #### Routes Required
 
-- [ ] `/api/minions`
+- [X] `/api/minions`
   - [X] GET /api/minions to get an array of all minions.
   - [X] POST /api/minions to create a new minion and save it to the database.
   - [X] GET /api/minions/:minionId to get a single minion by id.
   - [X] PUT /api/minions/:minionId to update a single minion by id.
-  - [ ] DELETE /api/minions/:minionId to delete a single minion by id.
-- [ ] `/api/ideas`
-  - [ ] GET /api/ideas to get an array of all ideas.
-  - [ ] POST /api/ideas to create a new idea and save it to the database.
-  - [ ] GET /api/ideas/:ideaId to get a single idea by id.
-  - [ ] PUT /api/ideas/:ideaId to update a single idea by id.
-  - [ ] DELETE /api/ideas/:ideaId to delete a single idea by id.
-- [ ] `/api/meetings`
-  - [ ] GET /api/meetings to get an array of all meetings.
-  - [ ] POST /api/meetings to create a new meeting and save it to the database.
-  - [ ] DELETE /api/meetings to delete _all_ meetings from the database.
+  - [X] DELETE /api/minions/:minionId to delete a single minion by id.
+- [X] `/api/ideas`
+  - [X] GET /api/ideas to get an array of all ideas.
+  - [X] POST /api/ideas to create a new idea and save it to the database.
+  - [X] GET /api/ideas/:ideaId to get a single idea by id.
+  - [X] PUT /api/ideas/:ideaId to update a single idea by id.
+  - [X] DELETE /api/ideas/:ideaId to delete a single idea by id.
+- [X] `/api/meetings`
+  - [X] GET /api/meetings to get an array of all meetings.
+  - [X] POST /api/meetings to create a new meeting and save it to the database.
+  - [X] DELETE /api/meetings to delete _all_ meetings from the database.
 
 For all `/api/minions` and `/api/ideas routes`, any POST or PUT requests will send their new/updated resources in the request body. POST request bodies will not have an `id` property, you will have to set it based on the next id in sequence.
 
@@ -122,9 +122,9 @@ Take note that many values that could be numbers are in fact strings. Since we a
 
 ### Custom Middleware
 
-- You will create a custom middleware function `checkMillionDollarIdea` that will come in handy in some /api/ideas routes. 
-- Write this function in the **server/checkMillionDollarIdea.js** file.
-- This function will make sure that any new or updated ideas are still worth at least one million dollars! The total value of an idea is the product of its `numWeeks` and `weeklyRevenue` properties.
+- [X] You will create a custom middleware function `checkMillionDollarIdea` that will come in handy in some /api/ideas routes. 
+- [X] Write this function in the **server/checkMillionDollarIdea.js** file.
+- [X] This function will make sure that any new or updated ideas are still worth at least one million dollars! The total value of an idea is the product of its `numWeeks` and `weeklyRevenue` properties.
 
 ### Bonus
 
